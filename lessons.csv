@@ -1,0 +1,121 @@
+Lecture,101,1,Dr. Smith,Monday,10,2,,S101
+Tutorial,101,2,Teaching Assistant,Tuesday,14,1,,S102
+Lab,101,3,Lab Instructor,Wednesday,16,3,,Lab301
+Lecture,101,4,Dr. Sarah Johnson,Thursday,13,2,,S103
+Tutorial,101,5,Ms. Lisa Chen,Friday,15,1,,S104
+Lab,101,6,Mr. David Wong,Monday,19,3,,Lab305
+Lecture,102,1,Prof. Johnson,Monday,12,2,,E101
+Tutorial,102,2,Teaching Assistant,Wednesday,10,1,,E102
+Lab,102,3,Lab Instructor,Thursday,14,3,,Lab201
+Lecture,102,4,Dr. Michael Torres,Tuesday,16,2,,E103
+Tutorial,102,5,Ms. Emily Rodriguez,Thursday,12,1,,E104
+Lab,102,6,Mr. James Patterson,Friday,17,3,,Lab205
+Lecture,103,1,Dr. Wilson,Tuesday,9,2,,M101
+Tutorial,103,2,Teaching Assistant,Thursday,11,1,,M102
+Lab,103,3,Lab Instructor,Friday,13,3,,Lab101
+Lecture,103,4,Prof. Anna Williams,Wednesday,14,2,,M103
+Tutorial,103,5,Mr. Robert Lee,Monday,16,1,,M104
+Lab,103,6,Dr. Jennifer Moore,Thursday,18,3,,Lab105
+Lecture,104,1,Prof. Brown,Wednesday,8,2,,B101
+Tutorial,104,2,Teaching Assistant,Friday,10,1,,B102
+Lab,104,3,Lab Instructor,Monday,15,3,,Lab301
+Lecture,104,4,Dr. Karen Thompson,Tuesday,11,2,,B103
+Tutorial,104,5,Ms. Rachel Adams,Thursday,9,1,,B104
+Lab,104,6,Mr. Steven Clark,Wednesday,17,3,,Lab305
+Lecture,105,1,Dr. Davis,Thursday,11,2,,S201
+Tutorial,105,2,Teaching Assistant,Monday,13,1,,S202
+Lab,105,3,Lab Instructor,Tuesday,16,3,,Lab302
+Lecture,105,4,Prof. Mark Evans,Friday,14,2,,S203
+Tutorial,105,5,Ms. Nicole Baker,Wednesday,12,1,,S204
+Lab,105,6,Dr. Christopher Hill,Monday,18,3,,Lab306
+Lecture,106,1,Prof. Miller,Friday,9,2,,E201
+Tutorial,106,2,Teaching Assistant,Tuesday,15,1,,E202
+Lab,106,3,Lab Instructor,Wednesday,17,3,,Lab202
+Lecture,106,4,Dr. Amanda Green,Monday,15,2,,E203
+Tutorial,106,5,Mr. Daniel Scott,Thursday,10,1,,E204
+Lab,106,6,Ms. Susan Turner,Tuesday,19,3,,Lab206
+Lecture,107,1,Dr. Garcia,Monday,14,2,,S301
+Tutorial,107,2,Teaching Assistant,Wednesday,12,1,,S302
+Lab,107,3,Lab Instructor,Thursday,17,3,,Lab303
+Lecture,107,4,Prof. Brian Cooper,Tuesday,9,2,,S303
+Tutorial,107,5,Ms. Michelle Parker,Friday,11,1,,S304
+Lab,107,6,Dr. Anthony Phillips,Wednesday,20,3,,Lab307
+Lecture,108,1,Prof. Anderson,Tuesday,16,2,,A101
+Tutorial,108,2,Teaching Assistant,Thursday,13,1,,A102
+Lab,108,3,Lab Instructor,Friday,15,3,,Lab101
+Lecture,108,4,Dr. Laura Murphy,Monday,10,2,,A103
+Tutorial,108,5,Mr. Kevin Roberts,Wednesday,14,1,,A104
+Lab,108,6,Ms. Stephanie Bell,Thursday,19,3,,Lab105
+Lecture,109,1,Dr. Taylor,Wednesday,10,2,,M201
+Tutorial,109,2,Teaching Assistant,Friday,12,1,,M202
+Lab,109,3,Lab Instructor,Monday,17,3,,Lab102
+Lecture,109,4,Prof. Gregory Ward,Thursday,16,2,,M203
+Tutorial,109,5,Ms. Jessica Collins,Tuesday,13,1,,M204
+Lab,109,6,Dr. Matthew Kelly,Friday,18,3,,Lab106
+Lecture,110,1,Prof. Thomas,Thursday,15,2,,E301
+Tutorial,110,2,Teaching Assistant,Monday,11,1,,E302
+Lab,110,3,Lab Instructor,Tuesday,18,3,,Lab203
+Lecture,110,4,Dr. Catherine Reed,Wednesday,12,2,,E303
+Tutorial,110,5,Mr. Joshua Price,Friday,14,1,,E304
+Lab,110,6,Ms. Melissa Stewart,Monday,20,3,,Lab207
+Lecture,111,1,Dr. Martin,Monday,8,2,,S401
+Tutorial,111,2,Teaching Assistant,Tuesday,16,1,,S402
+Lab,111,3,Lab Instructor,Wednesday,19,3,,Lab304
+Lecture,111,4,Prof. Timothy Cox,Thursday,11,2,,S403
+Tutorial,111,5,Ms. Angela Ward,Friday,13,1,,S404
+Lab,111,6,Dr. Jonathan Morris,Tuesday,21,3,,Lab308
+Lecture,112,1,Prof. White,Tuesday,10,2,,SEC101
+Tutorial,112,2,Teaching Assistant,Thursday,14,1,,SEC102
+Lab,112,3,Lab Instructor,Friday,16,3,,SecLab1
+Lecture,112,4,Dr. Patricia Rogers,Monday,12,2,,SEC103
+Tutorial,112,5,Mr. William Cook,Wednesday,15,1,,SEC104
+Lab,112,6,Ms. Rebecca Morgan,Thursday,18,3,,SecLab2
+Lecture,113,1,Dr. Clark,Wednesday,9,2,,MOB101
+Tutorial,113,2,Teaching Assistant,Friday,13,1,,MOB102
+Lab,113,3,Lab Instructor,Monday,18,3,,MobLab1
+Lecture,113,4,Prof. Elizabeth Bailey,Tuesday,14,2,,MOB103
+Tutorial,113,5,Mr. Richard Rivera,Thursday,11,1,,MOB104
+Lab,113,6,Dr. Mary Peterson,Friday,19,3,,MobLab2
+Lecture,114,1,Prof. Lewis,Thursday,12,2,,AI101
+Tutorial,114,2,Teaching Assistant,Monday,15,1,,AI102
+Lab,114,3,Lab Instructor,Tuesday,19,3,,AILab1
+Lecture,114,4,Dr. Sandra Simmons,Wednesday,16,2,,AI103
+Tutorial,114,5,Ms. Donna Brooks,Friday,10,1,,AI104
+Lab,114,6,Mr. Paul Howard,Monday,21,3,,AILab2
+Lecture,115,1,Dr. Walker,Friday,11,2,,VIS101
+Tutorial,115,2,Teaching Assistant,Tuesday,17,1,,VIS102
+Lab,115,3,Lab Instructor,Wednesday,20,3,,VisLab1
+Lecture,115,4,Prof. Carol Foster,Monday,13,2,,VIS103
+Tutorial,115,5,Mr. George Gray,Thursday,15,1,,VIS104
+Lab,115,6,Ms. Helen Wood,Tuesday,18,3,,VisLab2
+Lecture,116,1,Prof. Hall,Monday,13,2,,SIG101
+Tutorial,116,2,Teaching Assistant,Wednesday,15,1,,SIG102
+Lab,116,3,Lab Instructor,Thursday,18,3,,SigLab1
+Lecture,116,4,Dr. Nancy Watson,Tuesday,10,2,,SIG103
+Tutorial,116,5,Ms. Frances Barnes,Friday,12,1,,SIG104
+Lab,116,6,Mr. Ralph Henderson,Wednesday,20,3,,SigLab2
+Lecture,117,1,Dr. Allen,Tuesday,14,2,,HCI101
+Tutorial,117,2,Teaching Assistant,Thursday,16,1,,HCI102
+Lab,117,3,Lab Instructor,Friday,19,3,,HCILab1
+Lecture,117,4,Prof. Dorothy Ross,Monday,11,2,,HCI103
+Tutorial,117,5,Mr. Eugene Powell,Wednesday,13,1,,HCI104
+Lab,117,6,Dr. Marie Jenkins,Thursday,20,3,,HCILab2
+Lecture,118,1,Prof. Young,Wednesday,11,2,,DIST101
+Tutorial,118,2,Teaching Assistant,Friday,14,1,,DIST102
+Lab,118,3,Lab Instructor,Monday,19,3,,DistLab1
+Lecture,118,4,Dr. Janet Perry,Thursday,15,2,,DIST103
+Tutorial,118,5,Ms. Ruth Coleman,Tuesday,12,1,,DIST104
+Lab,118,6,Mr. Arthur Butler,Friday,20,3,,DistLab2
+Lecture,119,1,Dr. King,Thursday,9,2,,QUA101
+Tutorial,119,2,Teaching Assistant,Monday,16,1,,QUA102
+Lab,119,3,Lab Instructor,Tuesday,20,3,,QuaLab1
+Lecture,119,4,Prof. Lawrence Griffin,Wednesday,13,2,,QUA103
+Tutorial,119,5,Ms. Joyce Alexander,Friday,15,1,,QUA104
+Lab,119,6,Dr. Harold Diaz,Monday,18,3,,QuaLab2
+Lecture,120,1,Prof. Wright,Friday,8,2,,BLK101
+Tutorial,120,2,Teaching Assistant,Tuesday,18,1,,BLK102
+Lab,120,3,Lab Instructor,Wednesday,21,3,,BlkLab1
+Lecture,120,4,Dr. Virginia Hayes,Monday,14,2,,BLK103
+Tutorial,120,5,Mr. Gerald Myers,Thursday,16,1,,BLK104
+Lab,120,6,Ms. Gloria Washington,Friday,19,3,,BlkLab2
+Tutorial,117,7,Teaching Assistant,Thursday,16,1,,karol
