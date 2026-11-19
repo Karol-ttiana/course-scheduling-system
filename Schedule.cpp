@@ -67,7 +67,7 @@ void Schedule::setId(int newid) {
 }
 
 void Schedule::addLesson(Lesson* lesson) {
-	for (int i = 0; i < lessons.size(); i++) {
+	for (size_t i = 0; i < lessons.size(); i++) {
 		if (lessons[i]->getDay() == lesson->getDay()) {
 			int start1 = lessons[i]->getStartHour();
 			int end1 = start1 + lessons[i]->getDuration();
@@ -276,7 +276,7 @@ void Schedule::printSchedule() const {
 		
 		// Collect all information for each day at this hour
 		vector<vector<pair<string, string>>> dayInfoLines(7); // 7 days, pairs of (content, color)
-		int maxLinesNeeded = 1;
+		size_t maxLinesNeeded = 1;
 		
 		for (int dayIdx = 0; dayIdx < 7; dayIdx++) {
 			const string& day = days[dayIdx];
@@ -357,7 +357,7 @@ void Schedule::printSchedule() const {
 		}
 		
 		// Print all the lines for this hour
-		for (int lineIdx = 0; lineIdx < maxLinesNeeded; lineIdx++) {
+		for (size_t lineIdx = 0; lineIdx < maxLinesNeeded; lineIdx++) {
 			// Print time only on first line
 			if (lineIdx == 0) {
 				cout << setw(timeColWidth) << timeStr;
@@ -483,7 +483,7 @@ bool Schedule::hasConflict(const Lesson* newLesson) const {
 }
 int Schedule::totalHours() const {
 	int total = 0;
-	for (int i = 0; i < lessons.size(); i++) {
+	for (size_t i = 0; i < lessons.size(); i++) {
 		total += lessons[i]->getDuration();
 	}
 	return total;
@@ -498,7 +498,7 @@ void Schedule::saveToFile(const  string& filename) const {
 		}
 
 		// כתיבה של כל שיעור
-		for (int i = 0; i < lessons.size(); i++) {
+		for (size_t i = 0; i < lessons.size(); i++) {
 			out << lessons[i]->getType() << ","               // Lecture / Tutorial / Lab
 				<< lessons[i]->getCourseId() << ","
 				<< lessons[i]->getGroupId() << ","
@@ -576,8 +576,8 @@ void Schedule::printConflicts() const {
 	bool hasAnyConflicts = false;
 	
 	// Check all pairs of lessons for conflicts
-	for (int i = 0; i < lessons.size(); i++) {
-		for (int j = i + 1; j < lessons.size(); j++) {
+	for (size_t i = 0; i < lessons.size(); i++) {
+		for (size_t j = i + 1; j < lessons.size(); j++) {
 			if (lessons[i]->getDay() == lessons[j]->getDay()) {
 				int start1 = lessons[i]->getStartHour();
 				int end1 = start1 + lessons[i]->getDuration();
@@ -603,7 +603,7 @@ void Schedule::printConflicts() const {
 	cout << string(70, '=') << endl;
 	cout << "Found " << conflictPairs.size() << " conflict(s) in this schedule:" << endl;
 	
-	for (int k = 0; k < conflictPairs.size(); k++) {
+	for (size_t k = 0; k < conflictPairs.size(); k++) {
 		int i = conflictPairs[k].first;
 		int j = conflictPairs[k].second;
 		

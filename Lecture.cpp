@@ -9,7 +9,9 @@ Lecture::Lecture() : Lesson() {}
 // Parameterized constructor: Initializes a Lecture using the base class constructor for inherited members.
 Lecture::Lecture(string type, int courseId, string day, int startHour, int endHour,
     string classroom, string teacherName, int groupNumber)
-    : Lesson(courseId, groupNumber, teacherName, day, startHour, endHour - startHour, "", classroom) {}
+    : Lesson(courseId, groupNumber, teacherName, day, startHour, endHour - startHour, "", classroom) {
+    (void)type;
+}
 
 // Returns the type of the lesson, which is "Lecture".
 std::string Lecture::getType() const {

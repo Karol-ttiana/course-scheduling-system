@@ -4,7 +4,9 @@
 
 Tutorial::Tutorial(std::string type, int courseId, std::string day, int startHour, int endHour,
                    std::string classroom, std::string teacherName, int groupNumber)
-    : Lesson(courseId, groupNumber, teacherName, day, startHour, endHour - startHour, "", classroom) {}
+    : Lesson(courseId, groupNumber, teacherName, day, startHour, endHour - startHour, "", classroom) {
+    (void)type;
+}
 
 void Tutorial::print() const {
     std::cout << "--- TUTORIAL - Course " << std::setw(3) << courseId

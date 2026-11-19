@@ -6,6 +6,7 @@ using namespace std;
 Lab::Lab(string type, int courseId, string day, int startHour, int endHour,
     string classroom, string teacherName, int groupNumber)
     : Lesson(courseId, groupNumber, teacherName, day, startHour, endHour - startHour, "", classroom) {
+    (void)type;
 }
 
 void Lab::print() const {

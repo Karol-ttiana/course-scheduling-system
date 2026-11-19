@@ -52,7 +52,7 @@ void System::clearScreen() {
 #ifdef _WIN32
     system("cls");
 #else
-    system("clear");
+    std::cout << "\033[2J\033[H";
 #endif
 }
 
@@ -446,7 +446,7 @@ void System::handlePrintCourses() {
     std::cout << "DISPLAYING FIRST 10 COURSES" << std::endl;
     std::cout << std::string(60, '=') << std::endl;
     int count = 0;
-    for (int i = 0; i < courses.size() && i < 10; ++i) {
+    for (size_t i = 0; i < courses.size() && i < 10; ++i) {
         std::cout << std::setw(2) << (i+1) << ". " << courses[i] << std::endl;
         count++;
     }
@@ -456,7 +456,7 @@ void System::handlePrintCourses() {
     } else {
         std::cout << std::string(60, '-') << std::endl;
         std::cout << "Showing " << count << " of " << courses.size() << " total courses." << std::endl;
-        if (count < courses.size()) {
+        if (static_cast<size_t>(count) < courses.size()) {
             std::cout << "Type 'More' to see the next 10 courses." << std::endl;
         }
         std::cout << std::string(60, '=') << std::endl;
@@ -468,7 +468,7 @@ void System::handleMore() {
         std::cout << "ERROR: You must use 'PrintCourses' first." << std::endl;
         return;
     }
-    if (lastPrintedCourseIndex >= courses.size()) {
+    if (static_cast<size_t>(lastPrintedCourseIndex) >= courses.size()) {
         std::cout << "INFO: No more courses to display." << std::endl;
         return;
     }
@@ -477,14 +477,15 @@ void System::handleMore() {
     std::cout << "DISPLAYING NEXT 10 COURSES" << std::endl;
     std::cout << std::string(60, '=') << std::endl;
     int count = 0;
-    for (int i = lastPrintedCourseIndex; i < courses.size() && count < 10; ++i) {
+    for (size_t i = static_cast<size_t>(lastPrintedCourseIndex);
+         i < courses.size() && count < 10; ++i) {
         std::cout << std::setw(2) << (i+1) << ". " << courses[i] << std::endl;
         count++;
     }
     lastPrintedCourseIndex += count;
     std::cout << std::string(60, '-') << std::endl;
     std::cout << "Showing " << lastPrintedCourseIndex << " of " << courses.size() << " total courses." << std::endl;
-    if (lastPrintedCourseIndex < courses.size()) {
+    if (static_cast<size_t>(lastPrintedCourseIndex) < courses.size()) {
         std::cout << "Type 'More' to see the next 10 courses." << std::endl;
     }
     std::cout << std::string(60, '=') << std::endl;
@@ -1075,8 +1076,8 @@ void System::handleFindTimeConflicts() {
         std::vector<std::pair<int, int>> lessonConflictPairs;
         const auto& lessons = schedule.getLessons();
         
-        for (int i = 0; i < lessons.size(); i++) {
-            for (int j = i + 1; j < lessons.size(); j++) {
+        for (size_t i = 0; i < lessons.size(); i++) {
+            for (size_t j = i + 1; j < lessons.size(); j++) {
                 if (lessons[i]->getDay() == lessons[j]->getDay()) {
                     int start1 = lessons[i]->getStartHour();
                     int end1 = start1 + lessons[i]->getDuration();
@@ -1084,7 +1085,8 @@ void System::handleFindTimeConflicts() {
                     int end2 = start2 + lessons[j]->getDuration();
                     
                     if ((start1 < end2) && (start2 < end1)) {
-                        lessonConflictPairs.push_back(std::make_pair(i, j));
+                        lessonConflictPairs.push_back(std::make_pair(
+                            static_cast<int>(i), static_cast<int>(j)));
                         hasLessonConflicts = true;
                     }
                 }
@@ -1101,8 +1103,8 @@ void System::handleFindTimeConflicts() {
         
         std::vector<int> courseList(scheduleCourseIds.begin(), scheduleCourseIds.end());
         
-        for (int i = 0; i < courseList.size(); i++) {
-            for (int j = i + 1; j < courseList.size(); j++) {
+        for (size_t i = 0; i < courseList.size(); i++) {
+            for (size_t j = i + 1; j < courseList.size(); j++) {
                 const Course* course1 = nullptr;
                 const Course* course2 = nullptr;
                 
