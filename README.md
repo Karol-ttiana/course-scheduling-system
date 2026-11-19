@@ -55,6 +55,16 @@ g++ -std=c++17 -Wall -Wextra -pedantic \
 
 The application expects its CSV data files in the current working directory.
 
+### CMake
+
+```bash
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build --parallel
+printf "Help\nExit\n" | ./build/course-schedule-manager
+```
+
+The repository includes a GitHub Actions workflow that builds the project and runs this smoke test on pushes and pull requests targeting `main`.
+
 ## Main Commands
 
 Use `Help` after starting the application to display the complete command list. Common commands include:
