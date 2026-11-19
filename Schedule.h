@@ -15,6 +15,10 @@ public:
     
     Schedule();                     
     Schedule(int id);             
+    Schedule(const Schedule& other);
+    Schedule& operator=(const Schedule& other);
+    Schedule(Schedule&& other) noexcept;
+    Schedule& operator=(Schedule&& other) noexcept;
 
     // Getter + Setter
     int getId() const;
@@ -38,7 +42,7 @@ public:
     void loadFromFile(const string& filename);
 
     // דסטרוקטור
-    ~Schedule();  // שחרור זיכרון לשיעורים
+    ~Schedule();
 };
 
 #endif // SCHEDULE_H

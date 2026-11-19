@@ -10,8 +10,54 @@ using namespace std;
 #include "Tutorial.h"
 #include "Lab.h"
 #include <fstream>  // חשוב לכלול את זה
+#include <utility>
 Schedule::Schedule() : id(0) {}
 Schedule::Schedule(int scheduleId) : id(scheduleId) {}
+
+Schedule::Schedule(const Schedule& other) : id(other.id) {
+    lessons.reserve(other.lessons.size());
+    for (const auto* lesson : other.lessons) {
+        lessons.push_back(lesson ? lesson->clone() : nullptr);
+    }
+}
+
+Schedule& Schedule::operator=(const Schedule& other) {
+    if (this == &other) {
+        return *this;
+    }
+
+    vector<Lesson*> copiedLessons;
+    copiedLessons.reserve(other.lessons.size());
+    for (const auto* lesson : other.lessons) {
+        copiedLessons.push_back(lesson ? lesson->clone() : nullptr);
+    }
+
+    for (auto* lesson : lessons) {
+        delete lesson;
+    }
+    lessons = std::move(copiedLessons);
+    id = other.id;
+    return *this;
+}
+
+Schedule::Schedule(Schedule&& other) noexcept
+    : id(other.id), lessons(std::move(other.lessons)) {
+    other.id = 0;
+}
+
+Schedule& Schedule::operator=(Schedule&& other) noexcept {
+    if (this == &other) {
+        return *this;
+    }
+
+    for (auto* lesson : lessons) {
+        delete lesson;
+    }
+    id = other.id;
+    lessons = std::move(other.lessons);
+    other.id = 0;
+    return *this;
+}
 
 int Schedule:: getId() const {
 	return id;
@@ -519,10 +565,9 @@ void Schedule::loadFromFile(const string& filename) {
 
 // Implementation of the destructor
 Schedule::~Schedule() {
-    // Free memory for all lessons
-   /* for (auto lesson : lessons) {
+    for (auto* lesson : lessons) {
         delete lesson;
-    }*/
+    }
     lessons.clear();
 }
 
