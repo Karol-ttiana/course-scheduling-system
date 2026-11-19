@@ -20,5 +20,8 @@ jobs:
       - name: Build
         run: cmake --build build --parallel
 
+      - name: Run tests
+        run: ctest --test-dir build --output-on-failure
+
       - name: Smoke test
         run: printf "Help\nExit\n" | ./build/course-schedule-manager

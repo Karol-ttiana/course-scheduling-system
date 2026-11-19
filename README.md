@@ -65,6 +65,14 @@ printf "Help\nExit\n" | ./build/course-schedule-manager
 
 The repository includes a GitHub Actions workflow that builds the project and runs this smoke test on pushes and pull requests targeting `main`.
 
+## Testing
+
+The project includes CTest coverage for schedule conflict detection, total-hour calculation, and deep-copy behavior:
+
+```bash
+ctest --test-dir build --output-on-failure
+```
+
 ## Main Commands
 
 Use `Help` after starting the application to display the complete command list. Common commands include:
